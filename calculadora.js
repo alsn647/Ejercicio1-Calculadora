@@ -9,7 +9,7 @@ let operacionValida = false;
 alert("Bienvenido");
 while (operacionValida === false) {
     operadores = prompt("Ingresa dos operadores");
-    if (operadores.charAt[0] != " " && operadores.charAt[operadores.length - 1]) {
+    if (operadores.charAt[0] != " " && operadores.charAt[operadores.length - 1] != " ") {
         operadoresDivididos = operadores.split(" ");
         primerOperador = operadoresDivididos[0];
         segundoOperador = operadoresDivididos[1];
