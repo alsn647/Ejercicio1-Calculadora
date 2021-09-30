@@ -1,7 +1,6 @@
 //Autor: Alessandro Sinibaldi - 2º DAW
 "use strict";
 let tipoDeOperacion;
-let tipoDeOperacionFiltrado = [];
 let primerOperador;
 let segundoOperador;
 let operadores;
