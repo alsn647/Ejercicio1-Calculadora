@@ -1,8 +1,8 @@
 //Autor: Alessandro Sinibaldi - 2º DAW
 "use strict";
-let tipoDeOperacion;
-let primerOperador;
-let segundoOperador;
+let tipoOperacion;
+let operador1;
+let operador2;
 let operadores;
 let operacionValida = false;
 let operadoresDivididos = [];
@@ -12,13 +12,13 @@ let resultado;
 alert("Bienvenido");
 while (continuar === true) {
     while (operacionValida === false) {
-        tipoDeOperacion = prompt("Ingresa el tipo de operacion: los simbolos son +, -, * y /");
-        if (tipoDeOperacion != null) {
-            tipoDeOperacion = tipoDeOperacion.trim();
-            let esOpValida = (tipoDeOperacion === "+"
-                || tipoDeOperacion === "-"
-                || tipoDeOperacion === "*"
-                || tipoDeOperacion === "/"
+        tipoOperacion = prompt("Ingresa el tipo de operacion: los simbolos son +, -, * y /");
+        if (tipoOperacion != null) {
+            tipoOperacion = tipoOperacion.trim();
+            let esOpValida = (tipoOperacion === "+"
+                || tipoOperacion === "-"
+                || tipoOperacion === "*"
+                || tipoOperacion === "/"
             )
             if (esOpValida === true) {
                 operacionValida = true;
@@ -42,8 +42,8 @@ while (continuar === true) {
             Number(operadoresFiltrados[0]);
             Number(operadoresFiltrados[1]);
             if (isNaN(operadoresFiltrados[0]) === false && isNaN(operadoresFiltrados[1]) === false) {
-                primerOperador = operadoresFiltrados[0];
-                segundoOperador = operadoresFiltrados[1];
+                operador1 = operadoresFiltrados[0];
+                operador2 = operadoresFiltrados[1];
                 operacionValida = true;
             } else {
                 alert("Los datos introducidos no son validos");
@@ -56,22 +56,22 @@ while (continuar === true) {
             operadoresFiltrados = [];
         }
     };
-    switch (tipoDeOperacion) {
+    switch (tipoOperacion) {
         case "+":
-            resultado = (Number(primerOperador) + Number(segundoOperador));
-            alert(`${primerOperador} ${tipoDeOperacion} ${segundoOperador} es: ${resultado}`)
+            resultado = (Number(operador1) + Number(operador2));
+            alert(`${operador1} ${tipoOperacion} ${operador2} es: ${resultado}`)
             break;
         case "-":
-            resultado = (Number(primerOperador) - Number(segundoOperador));
-            alert(`${primerOperador} ${tipoDeOperacion} ${segundoOperador} es: ${resultado}`)
+            resultado = (Number(operador1) - Number(operador2));
+            alert(`${operador1} ${tipoOperacion} ${operador2} es: ${resultado}`)
             break;
         case "*":
-            resultado = (Number(primerOperador) * Number(segundoOperador));
-            alert(`${primerOperador} ${tipoDeOperacion} ${segundoOperador} es: ${resultado}`)
+            resultado = (Number(operador1) * Number(operador2));
+            alert(`${operador1} ${tipoOperacion} ${operador2} es: ${resultado}`)
             break;
         case "/":
-            resultado = (Number(primerOperador) / Number(segundoOperador));
-            alert(`${primerOperador} ${tipoDeOperacion} ${segundoOperador} es: ${resultado}`)
+            resultado = (Number(operador1) / Number(operador2));
+            alert(`${operador1} ${tipoOperacion} ${operador2} es: ${resultado}`)
             break;
         default:
             break;
